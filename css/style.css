@@ -1,47 +1,46 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 :root {
-    /* Define Color palette */
-    --clr-dark: #111111;
-    --clr-light: #fafafa;
-    --clr-accent: #ff652f;
-    --clr-headings: #ff652f;
-    --clr-body: #111111;
-    /* Font family */
-    --ff-primary: "Inter", sans-serif,"Source Sans Pro";
-    /* Font size */
-    --fs-body: 1.8rem;
-    --fs-h1: clamp(4.4rem , 5vw + 1.6rem , 11.2rem);
-    --fs-h2: 3.6rem;
-    --fs-h3: 2.4rem;
-    --fs-h4: 2.16rem;
+  /* Define Color palette */
+  --clr-dark: #111111;
+  --clr-light: #fafafa;
+  --clr-accent: #ff652f;
+  --clr-headings: #ff652f;
+  --clr-body: #111111;
+  /* Font family */
+  --ff-primary: "Inter", sans-serif, "Source Sans Pro";
+  /* Font size */
+  --fs-h1: clamp(4.4rem, 5vw + 1.6rem, 11.2rem);
+  --fs-body: 2.0rem;
+  --fs-h2: 3.6rem;
+  --fs-h3: 3.0rem;
+  --fs-h4: 2.6rem;
 
-    /* Font weight */
-    --fw-thin: 300;
-    --fw-reg: 400;
-    --fw-bold: 700;
-    --fw-xbold:900;
+  /* Font weight */
+  --fw-thin: 300;
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --fw-xbold: 900;
 }
 /* Typography */
 html {
-    /* 62.5% * 16 = 10px */
-    font-size: 62.5%;
+  /* 62.5% * 16 = 10px */
+  font-size: 62.5%;
 }
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    min-height: 100vh;
-    background-color : var(--clr-light);
-    color : var(--clr-body);
-    font-family: var(--ff-primary);
-    font-size: var(--fs-body);
-    font-weight: var(--fw-reg);
-    line-height: 1.5; /* default is 1.2*/
-
+  min-height: 100vh;
+  background-color: var(--clr-light);
+  color: var(--clr-body);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  line-height: 1.5; /* default is 1.2*/
 }
 ody,
 h1,
@@ -64,21 +63,21 @@ h1,
 h2,
 h3,
 h4 {
-    color : var(--clr-headings);
-    letter-spacing: 0.5rem;
-    
+  color: var(--clr-headings);
+  letter-spacing: 0.5rem;
+  font-weight : var(--fw-bold);
 }
 h1 {
-    font-size: var(--fs-h1);
+  font-size: var(--fs-h1);
 }
-h2{
-    font-size: var(--fs-h2);
+h2 {
+  font-size: var(--fs-h2);
 }
-h3{
-    font-size: var(--fs-h3);
+h3 {
+  font-size: var(--fs-h3);
 }
 h4 {
-    font-size: var(--fs-h4);
+  font-size: var(--fs-h4);
 }
 
 a {
@@ -117,3 +116,30 @@ a {
     scroll-behavior: auto !important;
   }
 }
+/* Tablet size */
+@media screen and (min-width: 45em) {
+  :root {
+    /* Font size */
+
+    --fs-h2: 4.4rem;
+    --fs-h3: 3.6rem;
+    --fs-h4: 2.4rem;
+    --fs-body: 1.8rem;
+  }
+}
+/* Links */
+.link-arrow {
+  color: var(--clr-accent);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+.link-arrow::after {
+  content: "-->";
+  margin-left: 2px;
+  transition: margin 0.15s;
+}
+.link-arrow:hover::after {
+  margin-left: 8px;
+}
+/*  */
