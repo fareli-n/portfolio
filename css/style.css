@@ -1,4 +1,11 @@
 
-
+:root {
+    /* Define Color palette */
+    --clr-dark: #111111;
+    --clr-light: #fafafa;
+    --clr-accent: #ff652f;
+    --clr-headings: #ff652f;
+    --clr-body: #111111;
+}
 body {
 }
