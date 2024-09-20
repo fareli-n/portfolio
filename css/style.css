@@ -1,4 +1,8 @@
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 :root {
     /* Define Color palette */
     --clr-dark: #111111;
@@ -6,6 +10,110 @@
     --clr-accent: #ff652f;
     --clr-headings: #ff652f;
     --clr-body: #111111;
+    /* Font family */
+    --ff-primary: "Inter", sans-serif,"Source Sans Pro";
+    /* Font size */
+    --fs-body: 1.8rem;
+    --fs-h1: clamp(4.4rem , 5vw + 1.6rem , 11.2rem);
+    --fs-h2: 3.6rem;
+    --fs-h3: 2.4rem;
+    --fs-h4: 2.16rem;
+
+    /* Font weight */
+    --fw-thin: 300;
+    --fw-reg: 400;
+    --fw-bold: 700;
+    --fw-xbold:900;
+}
+/* Typography */
+html {
+    /* 62.5% * 16 = 10px */
+    font-size: 62.5%;
+}
+html:focus-within {
+    scroll-behavior: smooth;
 }
 body {
+    min-height: 100vh;
+    background-color : var(--clr-light);
+    color : var(--clr-body);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    line-height: 1.5; /* default is 1.2*/
+
+}
+ody,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+dl,
+dd,
+picture,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color : var(--clr-headings);
+    letter-spacing: 0.5rem;
+    
+}
+h1 {
+    font-size: var(--fs-h1);
+}
+h2{
+    font-size: var(--fs-h2);
+}
+h3{
+    font-size: var(--fs-h3);
+}
+h4 {
+    font-size: var(--fs-h4);
+}
+
+a {
+  text-decoration: none;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select,
+a {
+  font: inherit;
+}
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* Removes animation for those who've turned them off*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
