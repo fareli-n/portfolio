@@ -14,10 +14,10 @@
   --ff-primary: "Inter", sans-serif, "Source Sans Pro";
   /* Font size */
   --fs-h1: clamp(4.4rem, 5vw + 1.6rem, 11.2rem);
-  --fs-body: 2.0rem;
+  --fs-body: 1.8rem;
   --fs-h2: 3.6rem;
-  --fs-h3: 3.0rem;
-  --fs-h4: 2.6rem;
+  --fs-h3: 2.4rem;
+  --fs-h4: 2.1rem;
 
   /* Font weight */
   --fw-thin: 300;
@@ -25,7 +25,6 @@
   --fw-bold: 700;
   --fw-xbold: 900;
 }
-/* Typography */
 html {
   /* 62.5% * 16 = 10px */
   font-size: 62.5%;
@@ -42,7 +41,7 @@ body {
   font-weight: var(--fw-reg);
   line-height: 1.5; /* default is 1.2*/
 }
-ody,
+body,
 h1,
 h2,
 h3,
@@ -59,13 +58,28 @@ blockquote {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Typography */
+
 h1,
 h2,
 h3,
 h4 {
   color: var(--clr-headings);
   letter-spacing: 0.5rem;
-  font-weight : var(--fw-bold);
+  font-weight: var(--fw-bold);
 }
 h1 {
   font-size: var(--fs-h1);
@@ -78,19 +92,6 @@ h3 {
 }
 h4 {
   font-size: var(--fs-h4);
-}
-
-a {
-  text-decoration: none;
-}
-.nowrap {
-  white-space: nowrap;
-}
-
-img,
-picture {
-  max-width: 100%;
-  display: block;
 }
 
 input,
@@ -116,17 +117,6 @@ a {
     scroll-behavior: auto !important;
   }
 }
-/* Tablet size */
-@media screen and (min-width: 45em) {
-  :root {
-    /* Font size */
-
-    --fs-h2: 4.4rem;
-    --fs-h3: 3.6rem;
-    --fs-h4: 2.4rem;
-    --fs-body: 1.8rem;
-  }
-}
 /* Links */
 .link-arrow {
   color: var(--clr-accent);
@@ -142,4 +132,39 @@ a {
 .link-arrow:hover::after {
   margin-left: 8px;
 }
-/*  */
+/* Buttons */
+.btn {
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-light);
+  color: var(--clr-accent);
+  width: 150px;
+  font-size: var(--fs-body);
+  padding: 0.5em 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin: 0.8em 0.8em;
+  transition: transform 0.2s ease-in-out;
+}
+.btn--noborder {
+  border: 0;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Tablet size */
+@media screen and (min-width: 45em) {
+  :root {
+    /* Font size */
+    --fs-h2: 4.8rem;
+    --fs-h3: 3.6rem;
+    --fs-h4: 2.4rem;
+    --fs-body: 2rem;
+  }
+  .btn {
+    width: 175px;
+    padding: 0.4em 0.8em;
+  }
+}
