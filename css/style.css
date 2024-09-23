@@ -15,7 +15,7 @@
   /* Font size */
   --fs-h1: clamp(4.4rem, 5vw + 1.6rem, 11.2rem);
   --fs-body: 1.8rem;
-  --fs-body: 1.6rem;
+  --fs-btn: 1.6rem;
   --fs-h2: 3.6rem;
   --fs-h3: 2.4rem;
   --fs-h4: 2.1rem;
@@ -26,7 +26,7 @@
   --fw-bold: 700;
   --fw-xbold: 900;
   /* Image size */
-    --pic-size: 300px;
+    --pic-size: 320px;
 
 }
 html {
@@ -58,7 +58,8 @@ dd,
 picture,
 figure,
 figcaption,
-blockquote {
+blockquote,
+a {
   margin: 0;
 }
 
@@ -122,9 +123,9 @@ a {
   }
 }
 /* Links */
-.link-arrow {
+.link-arrow , .read-more {
   color: var(--clr-accent);
-  font-size: var(--fs-body);
+  font-size: var(--fs-btn);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
 }
@@ -136,12 +137,14 @@ a {
 .link-arrow:hover::after {
   margin-left: 8px;
 }
+
+
 /* Buttons */
 .btn {
   border: 2px solid var(--clr-accent);
   background-color: var(--clr-light);
   color: var(--clr-accent);
-  width: 150px;
+  width: 135px;
   font-size: var(--fs-btn);
   padding: 0.3em 0;
   text-transform: uppercase;
@@ -164,16 +167,19 @@ a {
   transform: scale(1.1);
 }
 /* Card */
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.card__header,
+.card__header{
+margin-bottom: 3rem;
+}
 .card__body {
-  margin-bottom: 3rem;
-
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .project__item {
@@ -191,12 +197,7 @@ a {
   opacity: 0.8;
 }
 
-.card__body {
-  text-align: center;
-}
-.project__header {
-  margin-bottom: 2rem;
-}
+
 /* Grids */
 
 .grid{
@@ -204,12 +205,41 @@ a {
   align-items: start;
   justify-items: center;
   place-content: center;
-  gap: 1.5rem;
+  gap: 8rem;
 }
 .grid--fit {
     grid-template-columns: repeat(auto-fit, var(--pic-size));
 }
+/* Blocks */
+.block {
+  padding: 6rem 1.2rem;
+}
+.block--dark {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+}
 
+.block__heading {
+  text-align: center;
+}
+.block__heading::after {
+  content:"";
+  display: block;
+  width: 4em;
+  height: 1px;
+  background-color: currentColor;
+  opacity : 0.25;
+  margin: 0.6rem auto 4rem;
+}
+
+.block__content {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.container {
+  max-width : 71rem;
+  margin: 0 auto;
+}
 /* Tablet size */
 @media screen and (min-width: 45em) {
   :root {
