@@ -25,6 +25,9 @@
   --fw-reg: 400;
   --fw-bold: 700;
   --fw-xbold: 900;
+  /* Image size */
+    --pic-size: 300px;
+
 }
 html {
   /* 62.5% * 16 = 10px */
@@ -194,6 +197,18 @@ a {
 .project__header {
   margin-bottom: 2rem;
 }
+/* Grids */
+
+.grid{
+  display : grid;
+  align-items: start;
+  justify-items: center;
+  place-content: center;
+  gap: 1.5rem;
+}
+.grid--fit {
+    grid-template-columns: repeat(auto-fit, var(--pic-size));
+}
 
 /* Tablet size */
 @media screen and (min-width: 45em) {
@@ -204,6 +219,8 @@ a {
     --fs-h4: 2.4rem;
     --fs-body: 2rem;
     --fs-btn: 1.8rem;
+    --pic-size: 400px;
+
   }
   .btn {
     width: 175px;
