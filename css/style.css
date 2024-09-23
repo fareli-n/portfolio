@@ -123,7 +123,7 @@ a {
   }
 }
 /* Links */
-.link-arrow , .read-more {
+.link-arrow {
   color: var(--clr-accent);
   font-size: var(--fs-btn);
   font-weight: var(--fw-bold);
@@ -137,8 +137,29 @@ a {
 .link-arrow:hover::after {
   margin-left: 8px;
 }
+/* Read more */
 
+.read-more {
+  color: var(--clr-accent);
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-bold);
+  margin-left : 1.5rem;
+  cursor: pointer;
+  transition: opacity  0.15s, 
+              margin 0.15s;
+}
+.read-more:hover {
+  opacity: 0.85;
+  margin-left : 2rem;
+  
+}
+.read-more-content {
+  display: none;
+}
 
+.show-read-more-content {
+  display: inline;
+}
 /* Buttons */
 .btn {
   border: 2px solid var(--clr-accent);
