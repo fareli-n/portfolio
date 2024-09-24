@@ -11,7 +11,7 @@
   --clr-headings: #ff652f;
   --clr-body: #111111;
   /* Font family */
-  --ff-primary: "Inter", sans-serif, "Source Sans Pro";
+  --ff-primary: "Segoe UI", "Inter", sans-serif, "Source Sans Pro";
   /* Font size */
   --fs-h1: clamp(4.4rem, 5vw + 1.6rem, 11.2rem);
   --fs-body: 1.8rem;
@@ -82,7 +82,7 @@ h2,
 h3,
 h4 {
   color: var(--clr-headings);
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-weight: var(--fw-bold);
 }
 h1 {
@@ -253,7 +253,7 @@ a {
   margin-bottom: 5rem;
 }
 .container {
-  max-width: 71rem;
+  max-width: 75rem;
   margin: 0 auto;
 }
 
@@ -365,8 +365,7 @@ a {
   transition: color 0.25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .nav__item a:hover,
-.nav__item a:active
- {
+.nav__item a:active {
   color: var(--clr-accent);
   padding: 0.25em 0;
   border-bottom: 0.1rem solid var(--clr-accent);
@@ -377,7 +376,31 @@ a {
 .nav__item a:active {
   opacity: 1;
 }
+/* Intro section */
+.intro {
+  min-height: 100vh;
+  min-height: 100svh;
+}
 
+.intro__subtitle {
+  color: var(--clr-dark);
+  font-weight: var(--fw-reg);
+}
+.intro__title {
+  color: var(--clr-dark);
+  font-weight: var(--fw-reg);
+  border-bottom: 3px solid var(--clr-accent);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+}
+.intro__title--accent {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  -webkit-text-fill-color: var(--clr-accent);
+  -webkit-text-stroke-width: 1px;
+}
 /* Tablet size */
 @media screen and (min-width: 45em) {
   :root {
@@ -389,18 +412,19 @@ a {
     --fs-btn: 1.8rem;
     --pic-size: 400px;
   }
+  /* Button */
   .btn {
     width: 175px;
     padding: 0.4em 0;
   }
-
+  /* Navigation bar */
   .nav__toggle {
     display: none;
   }
   .nav__list {
     flex-direction: row;
     justify-content: end;
-    max-height: 100%;
+    /* max-height: 100%; */
     opacity: 1;
     padding: 0.4em 3em;
     margin: 0;
@@ -410,5 +434,17 @@ a {
   }
   .nav__item a {
     font-size: var(--fs-body);
+  }
+  /* Intro */
+  .intro__title {
+    letter-spacing: 0.3rem;
+  }
+  .intro__title--accent {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    transition: -webkit-text-fill-color 0.5s ease-in-out;
+  }
+  .intro__title--accent:hover {
+    -webkit-text-fill-color: var(--clr-accent);
   }
 }
