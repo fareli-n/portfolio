@@ -238,6 +238,7 @@ a {
 .block--dark {
   background: var(--clr-dark);
   color: var(--clr-light);
+  opacity: 0.9;
 }
 
 .block__heading {
@@ -409,6 +410,17 @@ a {
   -webkit-text-fill-color: var(--clr-accent);
   -webkit-text-stroke-width: 1px;
 }
+/* Contact */
+.contact__card {
+  font-size: var(--fs-h3);
+  color: var(--clr-light);
+  text-align: center;
+}
+.contact__description {
+  color: var(--clr-accent);
+  margin-top : 0.5rem;
+}
+
 /* Tablet size */
 @media screen and (min-width: 45em) {
   :root {
