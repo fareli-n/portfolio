@@ -417,9 +417,24 @@ a {
   text-align: center;
 }
 .contact__description {
-  
   color: var(--clr-accent);
   margin-top : 1rem;
+}
+/* Footer */
+
+.footer {
+  opacity : 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer.block {
+  padding : 1rem 1rem; 
+}
+  
+.footer .fab{
+  color : var(--clr-accent);
+  font-size: var(--fs-body);
 }
 
 /* Tablet size */
