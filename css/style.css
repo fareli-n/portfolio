@@ -144,11 +144,15 @@ a {
   font-weight: var(--fw-bold);
   margin-left: 1.5rem;
   cursor: pointer;
-  transition: opacity 0.15s, margin 0.15s;
+  display: inline-block;
+  transition: opacity 0.15s, transform 0.15s;
 }
 .read-more:hover {
   opacity: 0.85;
-  margin-left: 2rem;
+  transform: translateX(5px);
+}
+.read-more:active {
+  opacity: 1;
 }
 .read-more-content {
   display: none;
@@ -157,6 +161,7 @@ a {
 .show-read-more-content {
   display: inline;
 }
+
 /* Buttons */
 .btn {
   border: 2px solid var(--clr-accent);
@@ -228,7 +233,7 @@ a {
 }
 /* Blocks */
 .block {
-  padding: 6rem 1.2rem;
+  padding: 6rem 2rem;
 }
 .block--dark {
   background: var(--clr-dark);
@@ -251,6 +256,9 @@ a {
 .block__content {
   text-align: center;
   margin-bottom: 5rem;
+}
+.block__content > * + * {
+  margin-top: 3rem;
 }
 .container {
   max-width: 75rem;
