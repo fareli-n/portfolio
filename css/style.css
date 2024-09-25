@@ -17,7 +17,7 @@
   --fs-body: 1.8rem;
   --fs-btn: 1.6rem;
   --fs-h2: 3.6rem;
-  --fs-h3: 2.4rem;
+  --fs-h3: 2.6rem;
   --fs-h4: 2.1rem;
 
   /* Font weight */
@@ -26,7 +26,7 @@
   --fw-bold: 700;
   --fw-xbold: 900;
   /* Image size */
-  --pic-size: 320px;
+  --min-grid-size: 320px;
 }
 html {
   /* 62.5% * 16 = 10px */
@@ -229,7 +229,7 @@ a {
   gap: 8rem;
 }
 .grid--fit {
-  grid-template-columns: repeat(auto-fit, var(--pic-size));
+  grid-template-columns: repeat(auto-fit, var(--min-grid-size));
 }
 /* Blocks */
 .block {
@@ -417,8 +417,9 @@ a {
   text-align: center;
 }
 .contact__description {
+  
   color: var(--clr-accent);
-  margin-top : 0.5rem;
+  margin-top : 1rem;
 }
 
 /* Tablet size */
@@ -427,10 +428,10 @@ a {
     /* Font size */
     --fs-h2: 4.8rem;
     --fs-h3: 3.6rem;
-    --fs-h4: 2.4rem;
+    --fs-h4: 3rem;
     --fs-body: 2rem;
     --fs-btn: 1.8rem;
-    --pic-size: 400px;
+    --min-grid-size: 400px;
   }
   /* Button */
   .btn {
@@ -466,5 +467,14 @@ a {
   }
   .intro__title--accent:hover {
     -webkit-text-fill-color: var(--clr-accent);
+  }
+  .contact {
+    --min-grid-size: 300px;
+  }
+  .contact__description {
+    font-size: var(--fs-h4);
+  }
+  .contact .grid {
+    gap : 5rem;
   }
 }
