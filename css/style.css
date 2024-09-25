@@ -250,7 +250,7 @@ a {
   height: 1px;
   background-color: currentColor;
   opacity: 0.25;
-  margin: 0.6rem auto 4rem;
+  margin: 0.6rem auto 6rem;
 }
 
 .block__content {
@@ -261,7 +261,7 @@ a {
   margin-top: 3rem;
 }
 .container {
-  max-width: 75rem;
+  max-width: 100rem;
   margin: 0 auto;
 }
 
